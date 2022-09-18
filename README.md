@@ -24,7 +24,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[MiTri Backend](https://github.com/mitri-solutions/mitri-backend): Backend base for MiTri Solutions.
 
 ## Installation
 
@@ -58,16 +58,30 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
+## Features:
+- Technologies: 
+    - GraphQL (dataloader, subscription).
+    - Queue, CronJobs.
+    - MongoDB.
+- Modules
+    - Auth:
+        - Phone, email, Social Login (facebook, google, apple).
+        - Forgot password.
+        - Register page (verify email, phone,...).
+        - Permission can customize, write decoration for access the resouce.
+    - Manager:
+        - CRUD, Pagination document.
+    - Payment:
+        - Payment with VNPay.
+        - Payment with MOMO.
+        - Payment with bank.
+    - Upload:
+        - Upload image.
+        - Resize image server.
+    - Setting modules:
+        - CRUD: has a module to save simple setting into the database.
+    - Email:
+        - Send email.
+    
+## license
 Nest is [MIT licensed](LICENSE).
