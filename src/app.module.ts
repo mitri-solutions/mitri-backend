@@ -4,6 +4,7 @@ import {
   default as config
 } from "./configs/env.config";
 import { ConfigModule } from "@nestjs/config";
+import { PaymentModule } from "@modules/payment/payment.module";
 
 @Module({
   imports: [
@@ -11,7 +12,8 @@ import { ConfigModule } from "@nestjs/config";
       isGlobal: true,
       load: [config]
     }),
-    UserModule
+    UserModule,
+    PaymentModule
   ],
   controllers: [],
   providers: []
