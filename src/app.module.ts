@@ -1,19 +1,17 @@
 import { Module } from "@nestjs/common";
 import { UserModule } from "@modules/user/user.module";
-import {
-  default as config
-} from "./configs/env.config";
-import { ConfigModule } from "@nestjs/config";
 import { PaymentModule } from "@modules/payment/payment.module";
+import { CoreModule } from "@commons/modules/core.module";
+import { AuthModule } from "@modules/auth/auth.module";
+import { SessionModule } from "@modules/sessions/session.module";
 
 @Module({
   imports: [
-    ConfigModule.forRoot({
-      isGlobal: true,
-      load: [config]
-    }),
+    CoreModule,
     UserModule,
-    PaymentModule
+    PaymentModule,
+    AuthModule,
+    SessionModule
   ],
   controllers: [],
   providers: []
